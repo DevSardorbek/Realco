@@ -1,0 +1,115 @@
+header {
+  // height: 100vh;
+  .header_top {
+    background-color: #939878;
+    .top_info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      .header_top_info {
+        p {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .header_bottom {
+    transition: 0.2s;
+    .header_bottom_section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .header_links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 25px 0;
+        .flex {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 8px;
+          img {
+            object-fit: cover;
+          }
+        }
+        a {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #2a2c1f;
+          padding: 9px 21px;
+        }
+        a:hover {
+          box-shadow: 0px 2px 4px 0px #00000014;
+          border-radius: 6px;
+          transition: 0.4s;
+        }
+        .btn {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          color: #fff;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: center;
+          border-radius: 6px;
+          padding: 9px 21px;
+          background-color: #cf6f49;
+        }
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .header_links {
+    padding: 15px 0 !important;
+    a {
+      padding: 0 !important;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .header_top {
+    display: none;
+  }
+  .header_bottom_section {
+    padding: 15px;
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .header_links {
+    padding: 15px 0 !important;
+    position: fixed;
+    flex-direction: column;
+    top: 65px;
+    left: -100%;
+    transition: 0.5s ease;
+    background-color: #f5f5f2;
+    width: 100%;
+    a {
+      font-size: 20px !important;
+      padding: 0 !important;
+    }
+  }
+  .active {
+    left: 0;
+  }
+}
